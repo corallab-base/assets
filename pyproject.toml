@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "corallab-assets"
+version = "0.1.0"
+description = ""
+authors = ["Tassos Manganaris <tassos.manganaris@gmail.com>"]
+readme = "README.org"
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
