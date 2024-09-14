@@ -21,14 +21,10 @@ robot_cfg = {
 
         "external_asset_path": current_dir,
 
-        "urdf_path": "dual_ur5.urdf",
-        "asset_root_path": "../ur5",
+        "urdf_path": "dual_ur5e.urdf",
+        "asset_root_path": "../ur5e",
 
-        # "isaac_usd_path": "/Isaac/Robots/UR10/ur10_long_suction.usd",
-        # "usd_robot_root": "/ur10",
-        # "usd_path": "robot/ur_description/dual_ur10e.usd",
-
-        "base_link": "base_fixture_link",
+        "base_link": "shared_base_link",
         "ee_link": "ee_link_0",
         "link_names": ["ee_link_0", "ee_link_1"],
         "collision_link_names": [
@@ -37,7 +33,7 @@ robot_cfg = {
         ],
 
         "external_robot_configs_path": current_dir,
-        "collision_spheres": 'collision_spheres.yml',
+        "collision_spheres": 'collision_spheres_with_grippers.yml',
         "collision_sphere_buffer": 0.005,
 
         "self_collision_ignore": {
@@ -46,14 +42,12 @@ robot_cfg = {
             "wrist_1_link_0": ["wrist_2_link_0", "wrist_3_link_0"],
             "wrist_2_link_0": ["wrist_3_link_0", "ee_link_0"],
             "wrist_3_link_0": ["ee_link_0"],
-            "ee_link_0": ["wrist_3_link_0"],
 
-            "upper_arm_link_1": ["shoulder_link_1","forearm_link_1"],
+            "upper_arm_link_1": ["shoulder_link_1", "forearm_link_1"],
             "forearm_link_1": ["wrist_1_link_1"],
             "wrist_1_link_1": ["wrist_2_link_1","wrist_3_link_1"],
             "wrist_2_link_1": ["wrist_3_link_1", "ee_link_1"],
             "wrist_3_link_1": ["ee_link_1"],
-            "ee_link_1": ["wrist_3_link_1"]
         },
         "self_collision_buffer": {
             "shoulder_link_0": 0.05,

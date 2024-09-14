@@ -37,23 +37,21 @@ robot_cfg = {
         ],
 
         "external_robot_configs_path": current_dir,
-        "collision_spheres": 'collision_spheres.yml',
+        "collision_spheres": 'collision_spheres_with_grippers.yml',
         "collision_sphere_buffer": 0.005,
 
         "self_collision_ignore": {
             "upper_arm_link_0": ["shoulder_link_0", "forearm_link_0"],
-            "forearm_link_0": ["wrist_1_link_0"],
+            "forarm_link_0": ["wrist_1_link_0"],
             "wrist_1_link_0": ["wrist_2_link_0", "wrist_3_link_0"],
             "wrist_2_link_0": ["wrist_3_link_0", "ee_link_0"],
             "wrist_3_link_0": ["ee_link_0"],
-            "ee_link_0": ["wrist_3_link_0"],
 
             "upper_arm_link_1": ["shoulder_link_1","forearm_link_1"],
-            "forearm_link_1": ["wrist_1_link_1"],
+            "forarm_link_1": ["wrist_1_link_1"],
             "wrist_1_link_1": ["wrist_2_link_1","wrist_3_link_1"],
             "wrist_2_link_1": ["wrist_3_link_1", "ee_link_1"],
             "wrist_3_link_1": ["ee_link_1"],
-            "ee_link_1": ["wrist_3_link_1"]
         },
         "self_collision_buffer": {
             "shoulder_link_0": 0.05,

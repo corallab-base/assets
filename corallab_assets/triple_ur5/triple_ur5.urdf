@@ -26,7 +26,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="../ur5/meshes/collision/base.obj"/>
+        <mesh filename="../ur5/meshes/collision/base.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -55,7 +55,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="../ur5/meshes/collision/shoulder.obj"/>
+        <mesh filename="../ur5/meshes/collision/shoulder.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -83,7 +83,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="../ur5/meshes/collision/upperarm.obj"/>
+        <mesh filename="../ur5/meshes/collision/upperarm.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -111,7 +111,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="../ur5/meshes/collision/forearm.obj"/>
+        <mesh filename="../ur5/meshes/collision/forearm.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -139,7 +139,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="../ur5/meshes/collision/wrist1.obj"/>
+        <mesh filename="../ur5/meshes/collision/wrist1.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -167,7 +167,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="../ur5/meshes/collision/wrist2.obj"/>
+        <mesh filename="../ur5/meshes/collision/wrist2.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -181,7 +181,7 @@
     <child link="wrist_3_link_0"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.09465"/>
     <axis xyz="0 1 0"/>
-    <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.2"/>
+    <limit effort="28.0" lower="-3.14159265359" upper="3.14159265359" velocity="3.2"/>
     <dynamics damping="0.1" friction="0.0"/>
   </joint>
   <link name="wrist_3_link_0">
@@ -195,7 +195,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="../ur5/meshes/collision/wrist3.obj"/>
+        <mesh filename="../ur5/meshes/collision/wrist3.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -219,7 +219,6 @@
     </collision>
   </link>
 
-
   <!--################################################
   ########              arm 1                  #######
   ####################################################-->
@@ -235,7 +234,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="../ur5/meshes/collision/base.obj"/>
+        <mesh filename="../ur5/meshes/collision/base.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -264,7 +263,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="../ur5/meshes/collision/shoulder.obj"/>
+        <mesh filename="../ur5/meshes/collision/shoulder.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -292,7 +291,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="../ur5/meshes/collision/upperarm.obj"/>
+        <mesh filename="../ur5/meshes/collision/upperarm.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -320,7 +319,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="../ur5/meshes/collision/forearm.obj"/>
+        <mesh filename="../ur5/meshes/collision/forearm.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -348,7 +347,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="../ur5/meshes/collision/wrist1.obj"/>
+        <mesh filename="../ur5/meshes/collision/wrist1.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -376,7 +375,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="../ur5/meshes/collision/wrist2.obj"/>
+        <mesh filename="../ur5/meshes/collision/wrist2.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -390,7 +389,7 @@
     <child link="wrist_3_link_1"/>
     <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.09465"/>
     <axis xyz="0 1 0"/>
-    <limit effort="28.0" lower="-6.28318530718" upper="6.28318530718" velocity="3.2"/>
+    <limit effort="28.0" lower="-3.14159265359" upper="3.14159265359" velocity="3.2"/>
     <dynamics damping="0.1" friction="0.0"/>
   </joint>
   <link name="wrist_3_link_1">
@@ -404,7 +403,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="../ur5/meshes/collision/wrist3.obj"/>
+        <mesh filename="../ur5/meshes/collision/wrist3.stl"/>
       </geometry>
     </collision>
     <inertial>
@@ -429,21 +428,233 @@
   </link>
 
   <!--################################################
+  ########              arm 2                  #######
+  ####################################################-->
+
+  <link name="base_link_2">
+    <visual>
+      <geometry>
+        <mesh filename="../ur5/meshes/visual/base.obj"/>
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="../ur5/meshes/collision/base.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="4.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <inertia ixx="0.00443333156" ixy="0.0" ixz="0.0" iyy="0.00443333156" iyz="0.0" izz="0.0072"/>
+    </inertial>
+  </link>
+
+  <joint name="shoulder_pan_joint_2" type="revolute">
+    <parent link="base_link_2"/>
+    <child link="shoulder_link_2"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.089159"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="150.0" lower="-3.14159265359" upper="3.14159265359" velocity="3.15"/>
+    <dynamics damping="0.1" friction="0.0"/>
+  </joint>
+  <link name="shoulder_link_2">
+    <visual>
+      <geometry>
+        <mesh filename="../ur5/meshes/visual/shoulder.obj"/>
+      </geometry>
+      <material name="UR-Blue">
+        <color rgba="0.376 0.576 0.674 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="../ur5/meshes/collision/shoulder.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="3.7"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <inertia ixx="0.010267495893" ixy="0.0" ixz="0.0" iyy="0.010267495893" iyz="0.0" izz="0.00666"/>
+    </inertial>
+  </link>
+  <joint name="shoulder_lift_joint_2" type="revolute">
+    <parent link="shoulder_link_2"/>
+    <child link="upper_arm_link_2"/>
+    <origin rpy="0.0 1.57079632679 0.0" xyz="0.0 0.13585 0.0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="150.0" lower="-3.14159265359" upper="3.14159265359" velocity="3.15"/>
+    <dynamics damping="0.1" friction="0.0"/>
+  </joint>
+  <link name="upper_arm_link_2">
+    <visual>
+      <geometry>
+        <mesh filename="../ur5/meshes/visual/upperarm.obj"/>
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="../ur5/meshes/collision/upperarm.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="8.393"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.28"/>
+      <inertia ixx="0.22689067591" ixy="0.0" ixz="0.0" iyy="0.22689067591" iyz="0.0" izz="0.0151074"/>
+    </inertial>
+  </link>
+  <joint name="elbow_joint_2" type="revolute">
+    <parent link="upper_arm_link_2"/>
+    <child link="forearm_link_2"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 -0.1197 0.425"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="150.0" lower="-3.14159265359" upper="3.14159265359" velocity="3.15"/>
+    <dynamics damping="0.1" friction="0.0"/>
+  </joint>
+  <link name="forearm_link_2">
+    <visual>
+      <geometry>
+        <mesh filename="../ur5/meshes/visual/forearm.obj"/>
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="../ur5/meshes/collision/forearm.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="2.275"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.25"/>
+      <inertia ixx="0.049443313556" ixy="0.0" ixz="0.0" iyy="0.049443313556" iyz="0.0" izz="0.004095"/>
+    </inertial>
+  </link>
+  <joint name="wrist_1_joint_2" type="revolute">
+    <parent link="forearm_link_2"/>
+    <child link="wrist_1_link_2"/>
+    <origin rpy="0.0 1.57079632679 0.0" xyz="0.0 0.0 0.39225"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="28.0" lower="-3.14159265359" upper="3.14159265359" velocity="3.2"/>
+    <dynamics damping="0.1" friction="0.0"/>
+  </joint>
+  <link name="wrist_1_link_2">
+    <visual>
+      <geometry>
+        <mesh filename="../ur5/meshes/visual/wrist1.obj"/>
+      </geometry>
+      <material name="UR-Blue">
+        <color rgba="0.376 0.576 0.674 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="../ur5/meshes/collision/wrist1.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.219"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <inertia ixx="0.111172755531" ixy="0.0" ixz="0.0" iyy="0.111172755531" iyz="0.0" izz="0.21942"/>
+    </inertial>
+  </link>
+  <joint name="wrist_2_joint_2" type="revolute">
+    <parent link="wrist_1_link_2"/>
+    <child link="wrist_2_link_2"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.093 0.0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="28.0" lower="-3.14159265359" upper="3.14159265359" velocity="3.2"/>
+    <dynamics damping="0.1" friction="0.0"/>
+  </joint>
+  <link name="wrist_2_link_2">
+    <visual>
+      <geometry>
+        <mesh filename="../ur5/meshes/visual/wrist2.obj"/>
+      </geometry>
+      <material name="DarkGray">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="../ur5/meshes/collision/wrist2.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.219"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <inertia ixx="0.111172755531" ixy="0.0" ixz="0.0" iyy="0.111172755531" iyz="0.0" izz="0.21942"/>
+    </inertial>
+  </link>
+  <joint name="wrist_3_joint_2" type="revolute">
+    <parent link="wrist_2_link_2"/>
+    <child link="wrist_3_link_2"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.09465"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="28.0" lower="-3.14159265359" upper="3.14159265359" velocity="3.2"/>
+    <dynamics damping="0.1" friction="0.0"/>
+  </joint>
+  <link name="wrist_3_link_2">
+    <visual>
+      <geometry>
+        <mesh filename="../ur5/meshes/visual/wrist3.obj"/>
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="../ur5/meshes/collision/wrist3.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1879"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <inertia ixx="0.0171364731454" ixy="0.0" ixz="0.0" iyy="0.0171364731454" iyz="0.0" izz="0.033822"/>
+    </inertial>
+  </link>
+  <joint name="ee_fixed_joint_2" type="fixed">
+    <parent link="wrist_3_link_2"/>
+    <child link="ee_link_2"/>
+    <origin rpy="0.0 0.0 1.57079632679" xyz="0.0 0.0823 0.0"/>
+    <dynamics damping="0.1" friction="0.0"/>
+  </joint>
+  <link name="ee_link_2">
+    <collision>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="-0.01 0 0"/>
+    </collision>
+  </link>
+
+  <!--################################################
   ########         shared base joints          #######
   ####################################################-->
 
   <joint name="base_link_joint_0" type="fixed">
     <parent link="base_fixture_link"/>
     <child link="base_link_0"/>
-    <origin rpy="0 0 3.1415" xyz="0.50 0.0 0.1"/>
+    <origin rpy="0 0 3.1415" xyz="0.50 0.25 0.1"/>
   </joint>
 
-
-  <!-- joints: main serial chain -->
   <joint name="base_link_joint_1" type="fixed">
     <parent link="base_fixture_link"/>
     <child link="base_link_1"/>
     <origin rpy="0 0 0.0" xyz="-0.50 0.0 0.1"/>
+  </joint>
+
+  <joint name="base_link_joint_2" type="fixed">
+    <parent link="base_fixture_link"/>
+    <child link="base_link_2"/>
+    <origin rpy="0 0 3.1415" xyz="0.50 -0.25 0.1"/>
   </joint>
 
 </robot>

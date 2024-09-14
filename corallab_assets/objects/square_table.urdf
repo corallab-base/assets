@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<robot name="square_table">
+  <link name="square_table">
+    <visual>
+      <geometry>
+        <box size="0.6 0.6 0.2"/>
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.6 0.6 0.2"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

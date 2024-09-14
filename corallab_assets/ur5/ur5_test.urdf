@@ -22,7 +22,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="meshes/collision/base.stl"/>
+        <mesh filename="meshes/visual/base.obj"/>
       </geometry>
     </collision>
     <inertial>
@@ -51,7 +51,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="meshes/collision/shoulder.stl"/>
+        <mesh filename="meshes/visual/shoulder.obj"/>
       </geometry>
     </collision>
     <inertial>
@@ -79,7 +79,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="meshes/collision/upperarm.stl"/>
+        <mesh filename="meshes/visual/upperarm.obj"/>
       </geometry>
     </collision>
     <inertial>
@@ -107,7 +107,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="meshes/collision/forearm.stl"/>
+        <mesh filename="meshes/visual/forearm.obj"/>
       </geometry>
     </collision>
     <inertial>
@@ -135,7 +135,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="meshes/collision/wrist1.stl"/>
+        <mesh filename="meshes/visual/wrist1.obj"/>
       </geometry>
     </collision>
     <inertial>
@@ -163,7 +163,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="meshes/collision/wrist2.stl"/>
+        <mesh filename="meshes/visual/wrist2.obj"/>
       </geometry>
     </collision>
     <inertial>
@@ -191,7 +191,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="meshes/collision/wrist3.stl"/>
+        <mesh filename="meshes/visual/wrist3.obj"/>
       </geometry>
     </collision>
     <inertial>

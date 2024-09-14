@@ -1,0 +1,21 @@
+robot: 'Cuboid'
+collision_spheres:
+  base_link:
+    - "center": [-0.2, -0.2, 0.0]
+      "radius": 0.1
+    - "center": [-0.2, 0.0, 0.0]
+      "radius": 0.1
+    - "center": [-0.2, 0.2, 0.0]
+      "radius": 0.1
+    - "center": [0.0, -0.2, 0.0]
+      "radius": 0.1
+    - "center": [0.0, 0.0, 0.0]
+      "radius": 0.1
+    - "center": [0.0, 0.2, 0.0]
+      "radius": 0.1
+    - "center": [0.2, -0.2, 0.0]
+      "radius": 0.1
+    - "center": [0.2, 0.0, 0.0]
+      "radius": 0.1
+    - "center": [0.2, 0.2, 0.0]
+      "radius": 0.1
